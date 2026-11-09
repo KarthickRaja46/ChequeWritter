@@ -21,6 +21,7 @@ public class PayeesForm : Form
         Font = new Font("Segoe UI", 9.5f);
         Size = new Size(640, 520);
         StartPosition = FormStartPosition.CenterParent;
+        AppIcon.Apply(this);
 
         _list = new BindingList<Payee>(store.Data.Payees.OrderBy(p => p.Name, StringComparer.OrdinalIgnoreCase)
             .Select(p => new Payee { Name = p.Name, Notes = p.Notes }).ToList()) { AllowNew = true, AllowRemove = true };

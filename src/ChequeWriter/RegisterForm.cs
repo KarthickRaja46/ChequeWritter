@@ -31,6 +31,7 @@ public class RegisterForm : Form
         Font = new Font("Segoe UI", 9.5f);
         Size = new Size(1100, 640);
         StartPosition = FormStartPosition.CenterParent;
+        AppIcon.Apply(this);
 
         AddCol("No.", nameof(ChequeRecord.ChequeNo), 70);
         AddCol("Cheque date", nameof(ChequeRecord.ChequeDate), 80, "dd-MM-yyyy");

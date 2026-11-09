@@ -25,7 +25,7 @@ public class MainForm : Form
     {
         _store = store;
         Text = "Cheque Writer";
-        Icon = SystemIcons.Application;
+        AppIcon.Apply(this);
         Font = new Font("Segoe UI", 10f);
         MinimumSize = new Size(900, 640);
         Size = new Size(1100, 760);
@@ -260,7 +260,7 @@ public class MainForm : Form
     void Preview()
     {
         using var doc = ChequePrinter.Create(Bank, CurrentData(), _store.Data.Settings, testPrint: false);
-        using var dlg = new PrintPreviewDialog { Document = doc, Width = 1100, Height = 800, UseAntiAlias = true };
+        using var dlg = new PrintPreviewDialog { Document = doc, Width = 1100, Height = 800, UseAntiAlias = true, Icon = AppIcon.Get() };
         dlg.ShowDialog(this);
     }
 

@@ -42,6 +42,7 @@ public class LayoutEditorForm : Form
         Size = new Size(1200, 720);
         MinimumSize = new Size(900, 560);
         StartPosition = FormStartPosition.CenterParent;
+        AppIcon.Apply(this);
 
         var right = new SplitContainer { Dock = DockStyle.Fill, Orientation = Orientation.Horizontal, SplitterDistance = 220 };
         right.Panel1.Controls.Add(_items);
