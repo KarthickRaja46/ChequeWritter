@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChequeWriter.Core\ChequeWriter.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Product>Cheque Writer</Product>
+    <Version>1.0.0</Version>
+    <Company>Karthick Raja</Company>
+    <Description>Prints RAK Bank (Business) cheques with amount in words, register and payee list.</Description>
+  </PropertyGroup>
+
+</Project>
